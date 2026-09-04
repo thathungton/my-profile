@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - Tôn Thất Hưng</title>
+  <style>
+  
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease; 
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .card-profile {
+      position: relative;
+      background-color: #ffffff;
+      width: 360px;
+      padding: 35px 25px 25px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+
+    .btn-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .btn-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3b82f6;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+      margin-top: 10px;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #1e293b;
+      margin: 12px 0 4px 0;
+    }
+
+    .title-job {
+      color: #3b82f6;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    p.bio {
+      color: #64748b;
+      font-size: 13.5px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+  
+    .skills-section {
+      text-align: left;
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .skills-title {
+      font-weight: 700;
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 12px;
+    }
+
+    .skill-item {
+      margin-bottom: 10px;
+    }
+
+    .skill-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .progress-bar {
+      background-color: #e2e8f0;
+      height: 7px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+    }
+
+
+    .btn-contact {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-contact:hover {
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+      transform: translateY(-2px);
+    }
+
+  
+    body.dark-mode {
+      background-color: #0f172a;
+    }
+
+    .card-profile.dark-mode {
+      background-color: #1e293b;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-profile.dark-mode .btn-toggle {
+      background: #334155;
+      color: #f1f5f9;
+    }
+
+    .card-profile.dark-mode h1 {
+      color: #f8fafc;
+    }
+
+    .card-profile.dark-mode p.bio {
+      color: #94a3b8;
+    }
+
+    .card-profile.dark-mode .skills-section {
+      background: #0f172a;
+    }
+
+    .card-profile.dark-mode .skills-title {
+      color: #cbd5e1;
+    }
+
+    .card-profile.dark-mode .skill-name {
+      color: #94a3b8;
+    }
+
+    .card-profile.dark-mode .progress-bar {
+      background-color: #334155; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-profile">
+    <button class="btn-toggle" onclick="toggleDarkMode()">🌙 Ninja Mode</button>
+
+    <img class="avatar" src="images/profava.jpg" alt="Ảnh của Hưng">
+
+    <h1>Tôn Thất Hưng</h1>
+    <div class="title-job">Front-End Developer</div>
+
+    <p class="bio">
+      Sống tại Đà Nẵng. Thà làm công nghệ thông tin, đối diện với virus và bugs còn hơn phải làm chỗ cũ với lũ rắn độc
+    </p>
+
+    <div class="skills-section">
+      <div class="skills-title">Kỹ năng chuyên môn</div>
+      
+      <div class="skill-item">
+        <div class="skill-name"><span>HTML5 / CSS3</span> <span>80%</span></div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 80%; background-color: #3b82f6;"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name"><span>JavaScript</span> <span>60%</span></div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 60%; background-color: #eab308;"></div>
+        </div>
+      </div>
+
+    <div class="skill-item">
+        <div class="skill-name"><span>Tiếng Anh giao tiếp</span> <span>90%</span></div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 90%; background-color: #3b82f6;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Kỹ năng xúc phạm mẹ mày nếu láo</span> <span>90%</span></div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 90%; background-color: #3b82f6;"></div>
+        </div>
+      </div>
+
+    <a href="#" class="btn-contact" onclick="alert('Đang kết nối tới Zalo của Hưng!')">
+      💬 Contact me
+    </a>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelector('.card-profile').classList.toggle('dark-mode');
+      
+      var btn = document.querySelector('.btn-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+        btn.innerText = '☀️ Light Mode';
+      } else {
+        btn.innerText = '🌙 Ninja Mode';
+      }
+    }
+  </script>
+
+</body>
+</html>
